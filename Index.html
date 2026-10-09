@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142c38">
+  <meta name="description" content="Pelajari dasar kriptografi secara interaktif dengan CryptoLab.">
+  <title>CryptoLab — Dasar Kriptografi</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navigasi utama">
+      <a class="brand" href="#dashboard" data-view-link="dashboard" aria-label="CryptoLab, beranda">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3.5 27 9.8v12.4L16 28.5 5 22.2V9.8L16 3.5Z"/><path d="M11 12.5h10M11 16h10M11 19.5h6"/></svg></span>
+        <span class="brand-copy"><strong>CryptoLab</strong><small>DASAR KRIPTOGRAFI</small></span>
+      </a>
+
+      <div class="nav-label">RUANG BELAJAR</div>
+      <nav class="main-nav">
+        <button class="nav-link is-active" type="button" data-view-link="dashboard" aria-current="page"><span class="nav-icon" aria-hidden="true">⌂</span>Ringkasan</button>
+        <button class="nav-link" type="button" data-view-link="modulo"><span class="nav-icon" aria-hidden="true">%</span>Operasi Modulo</button>
+        <button class="nav-link" type="button" data-view-link="converter"><span class="nav-icon" aria-hidden="true">↔</span>Huruf ↔ Angka</button>
+        <button class="nav-link" type="button" data-view-link="caesar"><span class="nav-icon" aria-hidden="true">⇄</span>Caesar Cipher</button>
+        <button class="nav-link" type="button" data-view-link="xor"><span class="nav-icon" aria-hidden="true">⊕</span>XOR Biner</button>
+      </nav>
+
+      <div class="sidebar-note">
+        <span class="note-orbit" aria-hidden="true">✳</span>
+        <p>Belajar dengan mencoba. Setiap perhitungan berjalan lokal di browser Anda.</p>
+      </div>
+      <div class="sidebar-footer"><span class="status-dot"></span>Offline · Tanpa akun</div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb"><span>RUANG BELAJAR</span><span aria-hidden="true">/</span><strong id="breadcrumb-current">Ringkasan</strong></div>
+        <div class="topbar-meta"><span class="local-badge"><span class="status-dot"></span>Semua proses lokal</span><span class="avatar" aria-hidden="true">CL</span></div>
+      </header>
+
+      <div class="views">
+        <section class="view is-visible" id="view-dashboard" data-view="dashboard" aria-labelledby="dashboard-title">
+          <div class="welcome-block">
+            <div class="welcome-copy">
+              <p class="eyebrow"><span class="eyebrow-line"></span>LABORATORIUM INTERAKTIF <span class="eyebrow-number">01 / 04</span></p>
+              <h1 id="dashboard-title">Rahasia matematika,<br><em>dibuka satu per satu.</em></h1>
+              <p class="welcome-description">Pelajari dasar kriptografi secara interaktif.</p>
+              <button class="text-link" type="button" data-view-link="modulo">Mulai dari operasi modulo <span aria-hidden="true">↗</span></button>
+            </div>
+            <div class="welcome-art" aria-hidden="true">
+              <div class="art-coordinate">A=0&nbsp; / &nbsp;Z=25</div>
+              <div class="art-ring art-ring-one"></div><div class="art-ring art-ring-two"></div>
+              <div class="art-core">C<span>↔</span>P</div>
+              <span class="art-mark mark-one">01</span><span class="art-mark mark-two">∑</span><span class="art-mark mark-three">26</span>
+              <div class="art-caption">POLA · ANGKA · KODE</div>
+            </div>
+          </div>
+
+          <div class="section-heading"><div><p class="eyebrow">PILIH EKSPERIMEN</p><h2>Empat alat, satu alfabet</h2></div><span class="section-count">04 MODUL</span></div>
+          <div class="feature-grid">
+            <article class="feature-card feature-modulo">
+              <div class="feature-top"><span class="feature-icon" aria-hidden="true">%</span><span class="feature-index">01</span></div>
+              <h3>Operasi Modulo</h3><p>Temukan sisa pembagian dan dasar aritmetika siklik.</p>
+              <button type="button" class="feature-action" data-view-link="modulo">Buka alat <span aria-hidden="true">↗</span></button>
+            </article>
+            <article class="feature-card feature-converter">
+              <div class="feature-top"><span class="feature-icon" aria-hidden="true">A<span class="icon-arrow">↔</span>0</span><span class="feature-index">02</span></div>
+              <h3>Huruf ↔ Angka</h3><p>Ubah alfabet menjadi angka, dan baca kembali kodenya.</p>
+              <button type="button" class="feature-action" data-view-link="converter">Buka alat <span aria-hidden="true">↗</span></button>
+            </article>
+            <article class="feature-card feature-caesar">
+              <div class="feature-top"><span class="feature-icon" aria-hidden="true">⇄</span><span class="feature-index">03</span></div>
+              <h3>Caesar Cipher</h3><p>Geser huruf dengan kunci sederhana yang bisa diatur.</p>
+              <button type="button" class="feature-action" data-view-link="caesar">Buka alat <span aria-hidden="true">↗</span></button>
+            </article>
+            <article class="feature-card feature-xor">
+              <div class="feature-top"><span class="feature-icon" aria-hidden="true">⊕</span><span class="feature-index">04</span></div>
+              <h3>XOR Biner</h3><p>Bandingkan bit demi bit melalui operasi eksklusif OR.</p>
+              <button type="button" class="feature-action" data-view-link="xor">Buka alat <span aria-hidden="true">↗</span></button>
+            </article>
+          </div>
+
+          <section class="quick-guide" aria-labelledby="guide-title">
+            <div class="guide-heading"><span class="guide-symbol" aria-hidden="true">i</span><div><p class="eyebrow">SEBELUM MEMULAI</p><h2 id="guide-title">Cara menggunakan lab</h2></div></div>
+            <div class="guide-steps"><div><span>01</span><p>Pilih salah satu modul di panel kiri atau kartu di atas.</p></div><div><span>02</span><p>Masukkan nilai, lalu jalankan perhitungannya.</p></div><div><span>03</span><p>Amati prosesnya, bukan hanya hasil akhirnya.</p></div></div>
+            <p class="guide-disclaimer">Catatan: Caesar Cipher dan XOR sederhana di sini untuk belajar, bukan untuk melindungi data sungguhan.</p>
+          </section>
+        </section>
+
+        <section class="view tool-view" id="view-modulo" data-view="modulo" aria-labelledby="modulo-title" hidden>
+          <div class="page-heading"><p class="eyebrow"><span class="eyebrow-line"></span>MODUL 01 <span class="eyebrow-number">ARITMETIKA</span></p><h1 id="modulo-title">Operasi <em>Modulo</em></h1><p>Temukan sisa pembagian, termasuk untuk bilangan negatif.</p></div>
+          <div class="tool-layout">
+            <form class="tool-panel" id="modulo-form" novalidate>
+              <div class="panel-heading"><div><span class="panel-kicker">KALKULATOR</span><h2>Masukkan nilai</h2></div><span class="panel-symbol" aria-hidden="true">%</span></div>
+              <label class="field-label" for="modulo-a">Bilangan pertama <span>bilangan bulat</span></label>
+              <input class="text-input" id="modulo-a" name="a" type="number" step="1" inputmode="numeric" placeholder="Contoh: 35" required>
+              <label class="field-label" for="modulo-n">Bilangan pembagi <span>tidak boleh 0</span></label>
+              <input class="text-input" id="modulo-n" name="n" type="number" step="1" inputmode="numeric" placeholder="Contoh: 26" required>
+              <div class="form-message" id="modulo-error" role="alert" hidden></div>
+              <div class="button-row"><button class="button button-primary" type="submit">Hitung <span aria-hidden="true">→</span></button><button class="button button-secondary" type="reset">Reset</button></div>
+            </form>
+            <section class="result-panel" aria-labelledby="modulo-result-title" aria-live="polite">
+              <div class="result-topline"><span class="panel-kicker">HASIL PERHITUNGAN</span><span class="result-status" id="modulo-status">MENUNGGU INPUT</span></div>
+              <h2 id="modulo-result-title">Sisa pembagian</h2>
+              <div class="result-number" id="modulo-result">—</div>
+              <div class="calculation-box"><span class="panel-kicker">LANGKAH PERHITUNGAN</span><p id="modulo-steps">Masukkan dua bilangan bulat untuk melihat prosesnya.</p></div>
+              <p class="formula-note">Untuk pembagi positif: <code>((a % n) + n) % n</code>. Hasil selalu berada di antara 0 dan n − 1.</p>
+            </section>
+          </div>
+          <div class="example-strip"><span class="example-label">COBA CONTOH</span><button type="button" data-example="modulo" data-a="35" data-n="26">35 mod 26 <span>→ 9</span></button><button type="button" data-example="modulo" data-a="10" data-n="3">10 mod 3 <span>→ 1</span></button><button type="button" data-example="modulo" data-a="15" data-n="5">15 mod 5 <span>→ 0</span></button></div>
+        </section>
+
+        <section class="view tool-view" id="view-converter" data-view="converter" aria-labelledby="converter-title" hidden>
+          <div class="page-heading"><p class="eyebrow"><span class="eyebrow-line"></span>MODUL 02 <span class="eyebrow-number">PEMETAAN ALFABET</span></p><h1 id="converter-title">Huruf <em>↔ Angka</em></h1><p>Setiap huruf punya posisi: A dimulai dari nol, Z berakhir di 25.</p></div>
+          <div class="tool-layout converter-layout">
+            <form class="tool-panel" id="converter-form" novalidate>
+              <div class="panel-heading"><div><span class="panel-kicker">KONVERTER ALFABET</span><h2>Atur konversi</h2></div><span class="panel-symbol" aria-hidden="true">A↔0</span></div>
+              <fieldset class="mode-picker"><legend class="field-label">Arah konversi</legend><div class="segmented-control"><label><input type="radio" name="converter-mode" value="letters" checked><span>Huruf ke angka</span></label><label><input type="radio" name="converter-mode" value="numbers"><span>Angka ke huruf</span></label></div></fieldset>
+              <label class="field-label" for="converter-input" id="converter-input-label">Teks <span>A–Z dan spasi</span></label>
+              <textarea class="text-input text-area" id="converter-input" rows="3" placeholder="Contoh: CAT" required></textarea>
+              <p class="field-hint" id="converter-hint">Huruf kecil akan diubah menjadi kapital. Spasi antarkata ditandai dengan /.</p>
+              <div class="form-message" id="converter-error" role="alert" hidden></div>
+              <div class="button-row"><button class="button button-primary" type="submit">Konversi <span aria-hidden="true">→</span></button><button class="button button-secondary" type="reset">Reset</button></div>
+            </form>
+            <section class="result-panel" aria-labelledby="converter-result-title" aria-live="polite">
+              <div class="result-topline"><span class="panel-kicker">HASIL KONVERSI</span><span class="result-status" id="converter-status">MENUNGGU INPUT</span></div>
+              <h2 id="converter-result-title">Hasil</h2>
+              <div class="text-result" id="converter-result">Hasil Anda akan muncul di sini.</div>
+              <div class="result-actions"><button class="button button-secondary copy-button" type="button" data-copy="converter-result" disabled><span aria-hidden="true">▢</span> Salin hasil</button></div>
+              <div class="alphabet-map" aria-label="Pemetaan alfabet A sama dengan 0 hingga Z sama dengan 25"><span>A=0</span><span>B=1</span><span>C=2</span><span>D=3</span><span>E=4</span><span>…</span><span>Z=25</span></div>
+              <p class="formula-note">Spasi ditulis sebagai <code>/</code> agar batas antarkata tetap jelas saat dikonversi.</p>
+            </section>
+          </div>
+          <div class="example-strip"><span class="example-label">COBA CONTOH</span><button type="button" data-example="converter" data-mode="letters" data-value="CAT">CAT <span>→ 2 0 19</span></button><button type="button" data-example="converter" data-mode="numbers" data-value="7 4 11 11 14">7 4 11 11 14 <span>→ HELLO</span></button></div>
+        </section>
+
+        <section class="view tool-view" id="view-caesar" data-view="caesar" aria-labelledby="caesar-title" hidden>
+          <div class="page-heading"><p class="eyebrow"><span class="eyebrow-line"></span>MODUL 03 <span class="eyebrow-number">SUBSTITUSI HURUF</span></p><h1 id="caesar-title">Caesar <em>Cipher</em></h1><p>Geser alfabet dengan kunci. Spasi dan tanda baca tetap pada tempatnya.</p></div>
+          <div class="tool-layout caesar-layout">
+            <form class="tool-panel" id="caesar-form" novalidate>
+              <div class="panel-heading"><div><span class="panel-kicker">PENGATURAN SANDI</span><h2>Atur pesan & kunci</h2></div><span class="panel-symbol" aria-hidden="true">⇄</span></div>
+              <fieldset class="mode-picker"><legend class="field-label">Mode</legend><div class="segmented-control"><label><input type="radio" name="caesar-mode" value="encrypt" checked><span>Enkripsi</span></label><label><input type="radio" name="caesar-mode" value="decrypt"><span>Dekripsi</span></label></div></fieldset>
+              <label class="field-label" for="caesar-input">Pesan <span>huruf, angka, atau tanda baca</span></label>
+              <textarea class="text-input text-area" id="caesar-input" rows="3" placeholder="Contoh: HELLO" required></textarea>
+              <div class="key-heading"><label class="field-label" for="caesar-key">Kunci pergeseran</label><output class="key-output" id="caesar-key-output" for="caesar-key caesar-key-number">3</output></div>
+              <div class="key-controls"><input id="caesar-key" type="range" min="0" max="25" value="3" aria-label="Geser kunci dari 0 sampai 25"><input class="text-input key-number" id="caesar-key-number" type="number" min="0" max="25" step="1" value="3" aria-label="Nilai kunci angka"></div>
+              <div class="form-message" id="caesar-error" role="alert" hidden></div>
+              <div class="button-row"><button class="button button-primary" type="submit">Proses <span aria-hidden="true">→</span></button><button class="button button-secondary" type="reset">Reset</button></div>
+            </form>
+            <section class="result-panel" aria-labelledby="caesar-result-title" aria-live="polite">
+              <div class="result-topline"><span class="panel-kicker">HASIL CAESAR</span><span class="result-status" id="caesar-status">MENUNGGU INPUT</span></div>
+              <h2 id="caesar-result-title">Pesan hasil</h2>
+              <div class="text-result" id="caesar-result">Hasil Anda akan muncul di sini.</div>
+              <div class="result-actions"><button class="button button-secondary copy-button" type="button" data-copy="caesar-result" disabled><span aria-hidden="true">▢</span> Salin hasil</button></div>
+              <div class="calculation-box"><span class="panel-kicker">LANGKAH PERGESERAN</span><p id="caesar-steps">Kunci 3 mengubah A→D, B→E, C→F.</p></div>
+              <p class="formula-note">Enkripsi: <code>C = (P + K) mod 26</code> · Dekripsi: <code>P = (C − K + 26) mod 26</code>.</p>
+            </section>
+          </div>
+          <div class="security-note"><span aria-hidden="true">!</span><p><strong>Untuk belajar saja.</strong> Caesar Cipher mudah dipecahkan dan tidak aman untuk melindungi pesan sungguhan.</p></div>
+          <div class="example-strip"><span class="example-label">COBA CONTOH</span><button type="button" data-example="caesar" data-mode="encrypt" data-value="XYZ" data-key="3">XYZ · kunci 3 <span>→ ABC</span></button><button type="button" data-example="caesar" data-mode="encrypt" data-value="HELLO" data-key="3">HELLO · kunci 3 <span>→ KHOOR</span></button><button type="button" data-example="caesar" data-mode="decrypt" data-value="ABC" data-key="3">ABC · kunci 3 <span>→ XYZ</span></button></div>
+        </section>
+
+        <section class="view tool-view" id="view-xor" data-view="xor" aria-labelledby="xor-title" hidden>
+          <div class="page-heading"><p class="eyebrow"><span class="eyebrow-line"></span>MODUL 04 <span class="eyebrow-number">OPERASI BIT</span></p><h1 id="xor-title">XOR <em>Biner</em></h1><p>Bandingkan dua deretan bit. Posisi yang berbeda menghasilkan 1.</p></div>
+          <form class="tool-panel xor-input-panel" id="xor-form" novalidate>
+            <div class="panel-heading"><div><span class="panel-kicker">KALKULATOR BIT</span><h2>Masukkan dua bilangan biner</h2></div><span class="panel-symbol" aria-hidden="true">⊕</span></div>
+            <div class="xor-inputs"><div><label class="field-label" for="xor-a">Biner pertama</label><input class="text-input mono-input" id="xor-a" type="text" inputmode="numeric" autocomplete="off" placeholder="Contoh: 1010" required></div><div class="xor-operator" aria-hidden="true">⊕</div><div><label class="field-label" for="xor-b">Biner kedua</label><input class="text-input mono-input" id="xor-b" type="text" inputmode="numeric" autocomplete="off" placeholder="Contoh: 1100" required></div></div>
+            <p class="field-hint">Hanya karakter 0 dan 1. Input yang lebih pendek akan dilengkapi nol di sebelah kiri.</p>
+            <div class="form-message" id="xor-error" role="alert" hidden></div>
+            <div class="button-row"><button class="button button-primary" type="submit">Hitung XOR <span aria-hidden="true">→</span></button><button class="button button-secondary" type="reset">Reset</button></div>
+          </form>
+          <section class="xor-result-section" aria-labelledby="xor-result-title" aria-live="polite">
+            <div class="xor-result-heading"><div><span class="panel-kicker">VISUALISASI PROSES</span><h2 id="xor-result-title">Perbandingan bit</h2></div><button class="button button-secondary copy-button" type="button" data-copy="xor-result-value" disabled><span aria-hidden="true">▢</span> Salin hasil</button></div>
+            <div class="bit-visualization" id="xor-visualization"><p class="empty-visualization">Hasil dan proses tiap posisi bit akan tampil di sini.</p></div>
+            <div class="truth-table-wrap"><div class="truth-heading"><span class="panel-kicker">TABEL KEBENARAN XOR</span><span>1 jika berbeda</span></div><table class="truth-table"><thead><tr><th scope="col">A</th><th scope="col">B</th><th scope="col">A ⊕ B</th></tr></thead><tbody><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>1</td><td class="bit-one">1</td></tr><tr><td>1</td><td>0</td><td class="bit-one">1</td></tr><tr><td>1</td><td>1</td><td>0</td></tr></tbody></table></div>
+          </section>
+          <div class="example-strip"><span class="example-label">COBA CONTOH</span><button type="button" data-example="xor" data-a="1010" data-b="1100">1010 ⊕ 1100 <span>→ 0110</span></button><button type="button" data-example="xor" data-a="101" data-b="11">101 ⊕ 11 <span>→ 110</span></button></div>
+        </section>
+      </div>
+      <footer class="page-footer"><span>CryptoLab <span aria-hidden="true">·</span> Dasar Kriptografi</span><span>Belajar kriptografi, satu langkah kecil.</span></footer>
+    </main>
+  </div>
+  <nav class="mobile-nav" aria-label="Navigasi modul">
+    <button type="button" data-view-link="dashboard" class="is-active" aria-current="page"><span aria-hidden="true">⌂</span><small>Beranda</small></button>
+    <button type="button" data-view-link="modulo"><span aria-hidden="true">%</span><small>Modulo</small></button>
+    <button type="button" data-view-link="converter"><span aria-hidden="true">↔</span><small>Huruf</small></button>
+    <button type="button" data-view-link="caesar"><span aria-hidden="true">⇄</span><small>Caesar</small></button>
+    <button type="button" data-view-link="xor"><span aria-hidden="true">⊕</span><small>XOR</small></button>
+  </nav>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
